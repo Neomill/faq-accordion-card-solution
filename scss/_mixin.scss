@@ -1,0 +1,5 @@
+@mixin mobile($device-width) {
+    @media( max-width: $device-width ) {
+        @content; //every rule the goes after these mixin will automatically goes right here.
+    }
+}

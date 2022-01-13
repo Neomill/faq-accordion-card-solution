@@ -4,99 +4,116 @@
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0"> <!-- displays site properly based on user's device -->
 
-  <link rel="icon" type="image/png" sizes="32x32" href="./images/favicon-32x32.png">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Kumbh+Sans:wght@400;700&display=swap" rel="stylesheet"> 
   
+  <link rel="icon" type="image/png" sizes="32x32" href="./images/favicon-32x32.png">
+  <link rel="stylesheet" href="./dist/css/main.css">
   <title>Frontend Mentor | FAQ Accordion Card</title>
 
   <!-- Feel free to remove these styles or customise in your own stylesheet 👍 -->
   <style>
-    .attribution { font-size: 11px; text-align: center; }
+    .attribution {font-size: 11px; text-align: center; }
     .attribution a { color: hsl(228, 45%, 44%); }
   </style>
 </head>
 <body>
   <main>
-    <section>
-      <h1>FAQ</h1>
+    <section class="faq_card">
+      <div class="faq_card__box_wrapper">
+        <img class="faq_card__box_img" src="./images/illustration-box-desktop.svg" alt="box image">
+        <figure class="faq_card__figure">
+          <img class="faq_card__woman_img" src="./images/illustration-woman-online-desktop.svg" alt="">
+        </figure>
+      </div>
 
-      <dl>
-        <dt>
-          <button id="accordion-header-1"
-                  aria-expanded="false"
-                  aria-controls="accordion-panel-1"
-                  data-accordion-header>
-            <h2>How many team members can I invite?</h2>
-            <img aria-hidden="true" src="./images/icon-arrow-down.svg" alt="arrow icon">
-          </button>
-        </dt>
-        <dd id="accordion-panel-1"
-            aria-labelledby="accordion-header-1"
-            hidden>
-          You can invite up to 2 additional users on the Free plan. There is no limit on 
-          team members for the Premium plan.
-        </dd>
+      <div class="faq_card__body">
+        <h1>FAQ</h1>
 
-
-        <dt>
-          <button id="accordion-header-2" 
-                  aria-expanded="false"
-                  aria-controls="accordion-panel-2"
-                  data-accordion-header>
-            <h2>What is the maximum file upload size?</h2>
-          </button>
-        </dt>
-        <dd id="accordion-panel-2"
-            aria-labelledby="accordion-header-2"
-            hidden>
-            No more than 2GB. All files in your account must fit your allotted storage space.
-        </dd>
+        <dl>
+          <dt>
+            <button id="accordion-header-1"
+                    aria-expanded="false"
+                    aria-controls="accordion-panel-1"
+                    data-accordion-header>
+              <h2>How many team members can I invite?</h2>
+              <img class="faq_card__arrow" aria-hidden="true" src="./images/icon-arrow-down.svg" alt="arrow icon">
+            </button>
+          </dt>
+          <dd id="accordion-panel-1"
+              aria-labelledby="accordion-header-1"
+              hidden>
+            You can invite up to 2 additional users on the Free plan. There is no limit on 
+            team members for the Premium plan.
+          </dd>
 
 
-        <dt>
-          <button id="accordion-header-3" 
-                  aria-expanded="false"
-                  aria-controls="accordion-panel-3"
-                  data-accordion-header>
-            <h2>How do I reset my password?</h2>
-          </button>
-        </dt>
-        <dd id="accordion-panel-3"
-            aria-labelledby="accordion-header-3"
-            hidden>
-          Click “Forgot password” from the login page or “Change password” from your profile page.
-          A reset link will be emailed to you.
-        </dd>
+          <dt>
+            <button id="accordion-header-2" 
+                    aria-expanded="false"
+                    aria-controls="accordion-panel-2"
+                    data-accordion-header>
+              <h2>What is the maximum file upload size?</h2>
+              <img class="faq_card__arrow" aria-hidden="true" src="./images/icon-arrow-down.svg" alt="arrow icon">
+            </button>
+          </dt>
+          <dd id="accordion-panel-2"
+              aria-labelledby="accordion-header-2"
+              hidden>
+              No more than 2GB. All files in your account must fit your allotted storage space.
+          </dd>
 
 
-        <dt>
-          <button id="accordion-header-4" 
-                  aria-expanded="false"
-                  aria-controls="accordion-panel-4"
-                  data-accordion-header>
-            <h2>Can I cancel my subscription?</h2>
-          </button>
-        </dt>
-        <dd id                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                 ="accordion-panel-4"
-            aria-labelledby="accordion-header-4"
-            hidden>
-          Yes! Send us a message and we’ll process your request no questions asked.
-        </dd>
+          <dt>
+            <button id="accordion-header-3" 
+                    aria-expanded="false"
+                    aria-controls="accordion-panel-3"
+                    data-accordion-header>
+              <h2>How do I reset my password?</h2>
+              <img class="faq_card__arrow" aria-hidden="true" src="./images/icon-arrow-down.svg" alt="arrow icon">
+            </button>
+          </dt>
+          <dd id="accordion-panel-3"
+              aria-labelledby="accordion-header-3"
+              hidden>
+            Click “Forgot password” from the login page or “Change password” from your profile page.
+            A reset link will be emailed to you.
+          </dd>
 
 
-        <dt>
-          <button id="accordion-header-5" 
-                  aria-expanded="false"
-                  aria-controls="accordion-panel-5"
-                  data-accordion-header>
-            <h2> Do you provide additional support?</h2> 
-          </button>
-        </dt>
-        <dd id="accordion-panel-5"
-            aria-labelledby="accordion-header-5"
-            hidden>
-          Chat and email support is available 24/7. Phone lines are open during normal business hours.
-        </dd>
-      </dl>
+          <dt>
+            <button id="accordion-header-4" 
+                    aria-expanded="false"
+                    aria-controls="accordion-panel-4"
+                    data-accordion-header>
+              <h2>Can I cancel my subscription?</h2>
+              <img class="faq_card__arrow" aria-hidden="true" src="./images/icon-arrow-down.svg" alt="arrow icon">
+            </button>
+          </dt>
+          <dd id                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                 ="accordion-panel-4"
+              aria-labelledby="accordion-header-4"
+              hidden>
+            Yes! Send us a message and we’ll process your request no questions asked.
+          </dd>
+
+
+          <dt>
+            <button id="accordion-header-5" 
+                    aria-expanded="false"
+                    aria-controls="accordion-panel-5"
+                    data-accordion-header>
+              <h2> Do you provide additional support?</h2> 
+              <img class="faq_card__arrow" aria-hidden="true" src="./images/icon-arrow-down.svg" alt="arrow icon">
+            </button>
+          </dt>
+          <dd id="accordion-panel-5"
+              aria-labelledby="accordion-header-5"
+              hidden>
+            Chat and email support is available 24/7. Phone lines are open during normal business hours.
+          </dd>
+        </dl>
+      </div>
     </section>
   </main>
 

@@ -1,5 +1,30 @@
 @import "./reset";
+@import "./faqcard";
+@import "./mixin";
+@import "./mobile_version";
+
 
 body{
-    background-color: ;
+    font-family: 'Kumbh Sans', sans-serif;
+    font-weight: 400;
+    font-size: 12px;
+
+    min-height: 100vh;
+
+    background: rgb(175,104,234);
+    background: linear-gradient(184deg, rgba(175,104,234,1) 0%, rgba(100,98,231,1) 100%); 
+    background-repeat: no-repeat;
+
+    position: relative;
 }
+
+main{
+    color: hsl(240, 6%, 50%);
+    width: inherit;
+    height: inherit;
+
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
